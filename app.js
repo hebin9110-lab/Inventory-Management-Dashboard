@@ -4,6 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
+const path = require("path");
+a
 
 
 // In-memory inventory store
@@ -13,7 +15,6 @@ let inventory = [
   { id: 3, name: 'Keyboard', quantity: 30 }
 ];
 
-app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
@@ -102,6 +103,4 @@ app.engine('ejs', (filePath, options, callback) => {
 
 app.listen(PORT, () => {
   console.log(`Inventory Dashboard running at https://inventory-management-dashboard-0h2z.onrender.com/`);
-
 });
-
