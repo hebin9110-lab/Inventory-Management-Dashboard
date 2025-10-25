@@ -4,12 +4,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
-const express = require("express");
-const path = require("path");
-const app = express();
-
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views")); // This assumes views is inside src
 
 
 // In-memory inventory store
@@ -110,3 +104,4 @@ app.listen(PORT, () => {
   console.log(`Inventory Dashboard running at https://inventory-management-dashboard-0h2z.onrender.com/`);
 
 });
+
